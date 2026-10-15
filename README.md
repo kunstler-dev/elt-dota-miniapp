@@ -28,6 +28,16 @@ The backend runs as a single Docker container on Railway: FastAPI serves the API
 
 > **Language note.** The game UI and bot messages are in Russian because that is the audience. Code, comments, docstrings and documentation are in English.
 
+## My role and how it was built
+
+This project was built with an AI coding assistant (Claude Code). I am not a professional programmer; my part was:
+
+- **Product:** the idea, the feature set and the game economy, including the soul rewards, shop pricing and cost per new user
+- **Directing the AI:** breaking the work into tasks, describing requirements, reviewing and testing the results, recording decisions
+- **Operations:** deployment on Railway, the Telegram bot and channel, the admin panel, running the live service
+
+The engineering practices described below (server-side authority, a ledger, idempotent payouts) were chosen together with the AI assistant, and I can explain why each one is there.
+
 ## Features
 
 | Area | What it does |
@@ -147,4 +157,4 @@ This is a fan project and is not affiliated with or endorsed by Valve Corporatio
 
 ## Author
 
-Built by [kunstler](https://github.com/kunstler-dev).
+[kunstler](https://github.com/kunstler-dev): product, AI-assisted development and operations.

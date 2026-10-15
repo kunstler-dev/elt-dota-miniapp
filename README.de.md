@@ -28,6 +28,16 @@ Das Backend läuft als ein einzelner Docker-Container auf Railway: FastAPI liefe
 
 > **Hinweis zur Sprache.** Die Spieloberfläche und die Bot-Nachrichten sind auf Russisch, weil das die Zielgruppe ist. Code, Kommentare, Docstrings und Dokumentation sind auf Englisch.
 
+## Meine Rolle und wie das Projekt entstanden ist
+
+Das Projekt wurde mit einem KI-Coding-Assistenten (Claude Code) umgesetzt. Ich bin kein ausgebildeter Programmierer; mein Teil war:
+
+- **Produkt:** die Idee, der Funktionsumfang und die Spielwirtschaft, einschließlich Seelen-Belohnungen, Shop-Preisen und Kosten pro neuem Nutzer
+- **Steuerung der KI:** Arbeit in Aufgaben zerlegen, Anforderungen beschreiben, Ergebnisse prüfen und testen, Entscheidungen dokumentieren
+- **Betrieb:** Deployment auf Railway, Telegram-Bot und Kanal, Admin-Bereich, laufender Live-Betrieb
+
+Die unten beschriebenen technischen Entscheidungen (Server als Quelle der Wahrheit, Journal, idempotente Auszahlungen) habe ich zusammen mit dem KI-Assistenten getroffen, und ich kann erklären, wozu jede davon dient.
+
 ## Funktionen
 
 | Bereich | Beschreibung |
@@ -147,4 +157,4 @@ Dies ist ein Fanprojekt und steht in keiner Verbindung zur Valve Corporation und
 
 ## Autor
 
-Entwickelt von [kunstler](https://github.com/kunstler-dev).
+[kunstler](https://github.com/kunstler-dev): Produkt, KI-gestützte Entwicklung und Betrieb.
