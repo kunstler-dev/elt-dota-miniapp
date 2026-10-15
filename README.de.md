@@ -147,4 +147,4 @@ Dies ist ein Fanprojekt und steht in keiner Verbindung zur Valve Corporation und
 
 ## Autor
 
-Entwickelt von [kunstler](https://github.com/1scamicon1).
+Entwickelt von [kunstler](https://github.com/kunstler-dev).

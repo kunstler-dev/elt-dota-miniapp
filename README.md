@@ -147,4 +147,4 @@ This is a fan project and is not affiliated with or endorsed by Valve Corporatio
 
 ## Author
 
-Built by [kunstler](https://github.com/1scamicon1).
+Built by [kunstler](https://github.com/kunstler-dev).
