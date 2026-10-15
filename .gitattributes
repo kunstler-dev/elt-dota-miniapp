@@ -1,0 +1,9 @@
+# Consistent line endings: LF in the repository and the working tree (except Windows scripts).
+* text=auto eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+*.png binary
+*.jpg binary
+*.webp binary
+*.ico binary

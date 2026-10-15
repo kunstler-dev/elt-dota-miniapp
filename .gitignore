@@ -1,0 +1,14 @@
+.env
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+node_modules/
+dist/
+backend/data/
+.claude/settings.local.json
+*.log

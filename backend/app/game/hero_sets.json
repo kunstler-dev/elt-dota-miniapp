@@ -1,0 +1,486 @@
+{
+ "axe": {
+  "slots": [
+   "weapon",
+   "armor",
+   "head",
+   "belt",
+   "misc"
+  ],
+  "default": {
+   "weapon": "items/axe_weapon.glb",
+   "armor": "items/axe_armor.glb",
+   "head": "items/axe_ponytail.glb",
+   "belt": "items/axe_belt.glb"
+  },
+  "sets": [
+   {
+    "id": "red_conqueror",
+    "name": "Красный завоеватель",
+    "tier": 1,
+    "parts": {
+     "weapon": "items/axeweapon_conq.glb",
+     "head": "items/axehelm_conq.glb",
+     "armor": "items/axearmor_conq.glb",
+     "belt": "items/axebelt_conq.glb"
+    }
+   },
+   {
+    "id": "battleforged",
+    "name": "Боевой громила",
+    "tier": 2,
+    "parts": {
+     "weapon": "items/torrid_armor_weapon.glb",
+     "misc": "items/torrid_armor_shield.glb",
+     "head": "items/torrid_armor_helmet.glb",
+     "armor": "items/torrid_armor_armor.glb",
+     "belt": "items/torrid_armor_belt.glb"
+    }
+   },
+   {
+    "id": "molten_fist",
+    "name": "Расплавленный кулак",
+    "tier": 3,
+    "parts": {
+     "armor": "items/axe_lava_legion_commander_armor.glb",
+     "belt": "items/axe_lava_legion_commander_belt.glb",
+     "head": "items/axe_lava_legion_commander_head.glb",
+     "misc": "items/axe_lava_legion_commander_misc.glb",
+     "weapon": "items/axe_lava_legion_commander_weapon.glb"
+    }
+   },
+   {
+    "id": "red_mist",
+    "name": "Жнец Красного тумана",
+    "tier": 5,
+    "parts": {
+     "belt": "items/reaper_belt.glb",
+     "head": "items/reaper_head.glb",
+     "misc": "items/reaper_misc.glb",
+     "weapon": "items/reaper_scythe.glb",
+     "armor": "items/reaper_armor.glb"
+    }
+   },
+   {
+    "id": "gilded_tyrant",
+    "name": "Позолоченный тиран",
+    "tier": 6,
+    "parts": {
+     "belt": "items/axe_winter_2025_belt_alt.glb",
+     "head": "items/axe_winter_2025_head_alt.glb",
+     "armor": "items/axe_winter_2025_armor_alt.glb",
+     "misc": "items/axe_winter_2025_misc_alt.glb",
+     "weapon": "items/axe_winter_2025_weapon_alt.glb"
+    }
+   },
+   {
+    "id": "unleashed",
+    "name": "Axe Unleashed",
+    "tier": 8,
+    "parts": {
+     "head": "items/ti9_jungle_axe_hair.glb",
+     "belt": "items/ti9_jungle_axe_belt.glb",
+     "armor": "items/invisiblebox.glb",
+     "weapon": "items/invisiblebox.glb"
+    }
+   }
+  ]
+ },
+ "drow": {
+  "slots": [
+   "arms",
+   "back",
+   "weapon",
+   "legs",
+   "misc",
+   "shoulder",
+   "head",
+   "body"
+  ],
+  "default": {
+   "arms": "items/drow_bracer.glb",
+   "back": "items/drow_cape.glb",
+   "weapon": "items/drow_weapon.glb",
+   "legs": "items/drow_legs.glb",
+   "misc": "items/drow_quiver.glb",
+   "shoulder": "items/drow_armor.glb",
+   "head": "items/drow_haircowl.glb",
+   "body": "body.glb"
+  },
+  "sets": [
+   {
+    "id": "sentinel",
+    "name": "Страж",
+    "tier": 1,
+    "parts": {
+     "weapon": "items/drow_sentinel_bow.glb",
+     "head": "items/drow_sentinel_helm.glb",
+     "legs": "items/drow_sentintel_legs.glb",
+     "misc": "items/drow_sentinel_quiver.glb",
+     "shoulder": "items/drow_sentinel_shoulders.glb",
+     "arms": "items/drow_sentinel_gloves.glb",
+     "back": "items/drow_sentinel_cloak.glb"
+    }
+   },
+   {
+    "id": "black_wind_raven",
+    "name": "Ворон чёрного ветра",
+    "tier": 2,
+    "parts": {
+     "head": "items/black_wind_head.glb",
+     "arms": "items/black_wind_arms.glb",
+     "shoulder": "items/black_wind_shoulders.glb",
+     "legs": "items/black_wind_legs.glb",
+     "weapon": "items/black_wind_weapon.glb",
+     "misc": "items/black_wind_quiver.glb",
+     "back": "items/black_wind_back.glb"
+    }
+   },
+   {
+    "id": "ravencloak",
+    "name": "Вороний плащ",
+    "tier": 3,
+    "parts": {
+     "arms": "items/drow_scree_arms.glb",
+     "legs": "items/drow_scree_legs.glb",
+     "shoulder": "items/drow_scree_shoulders.glb",
+     "head": "items/drow_scree_head.glb",
+     "back": "items/drow_scree_back.glb",
+     "weapon": "items/drow_scree_weapon.glb",
+     "misc": "items/drow_scree_quiver.glb"
+    }
+   },
+   {
+    "id": "frostborne",
+    "name": "Морозная странница",
+    "tier": 5,
+    "parts": {
+     "shoulder": "items/misty_huntress_shoulder.glb",
+     "weapon": "items/misty_huntress_weapon.glb",
+     "arms": "items/misty_huntress_arms.glb",
+     "misc": "items/misty_huntress_misc.glb",
+     "legs": "items/misty_huntress_legs.glb",
+     "back": "items/misty_huntress_back.glb",
+     "head": "items/misty_huntress_head.glb"
+    }
+   },
+   {
+    "id": "algid_falcon",
+    "name": "Ледяной сокол",
+    "tier": 6,
+    "parts": {
+     "weapon": "items/arvalias_legacy_weapon.glb",
+     "arms": "items/arvalias_legacy_arms.glb",
+     "legs": "items/arvalias_legacy_legs.glb",
+     "back": "items/arvalias_legacy_back.glb",
+     "misc": "items/arvalias_legacy_misc.glb",
+     "shoulder": "items/arvalias_legacy_shoulder.glb",
+     "head": "items/arvalias_legacy_head.glb"
+    }
+   },
+   {
+    "id": "sepulchral",
+    "name": "Sepulchral Stalker",
+    "tier": 8,
+    "parts": {
+     "weapon": "items/drow_monster_weapon.glb",
+     "shoulder": "items/drow_monster_arcana_shoulder.glb",
+     "misc": "items/drow_monster_arcana_quiver.glb",
+     "legs": "items/drow_monster_arcana_legs.glb",
+     "head": "items/drow_monster_arcana_head.glb",
+     "back": "items/drow_monster_arcana_back.glb",
+     "arms": "items/drow_monster_arcana_arms.glb"
+    }
+   },
+   {
+    "id": "dread_retribution",
+    "name": "Dread Retribution",
+    "tier": 12,
+    "parts": {
+     "body": "body_arcana.glb",
+     "head": "items/drow_arcana_head.glb",
+     "shoulder": "items/drow_arcana_shoulder.glb",
+     "misc": "items/drow_arcana_quiver.glb",
+     "legs": "items/drow_arcana_legs.glb",
+     "back": "items/drow_arcana_back.glb",
+     "arms": "items/drow_arcana_arms.glb",
+     "weapon": "items/drow_arcana_bow.glb"
+    }
+   }
+  ]
+ },
+ "antimage": {
+  "slots": [
+   "weapon",
+   "head",
+   "armor",
+   "arms",
+   "belt",
+   "offhand_weapon",
+   "shoulder",
+   "body"
+  ],
+  "default": {
+   "weapon": "items/antimage_weapon.glb",
+   "head": "items/antimage_head.glb",
+   "armor": "items/antimage_chest.glb",
+   "arms": "items/antimage_arms.glb",
+   "belt": "items/antimage_belt.glb",
+   "offhand_weapon": "items/antimage_offhand_weapon.glb",
+   "body": "body.glb"
+  },
+  "sets": [
+   {
+    "id": "mage_slayer",
+    "name": "Убийца магов",
+    "tier": 1,
+    "parts": {
+     "armor": "items/antimage_slasher_vest.glb",
+     "shoulder": "items/antimage_slasher_neck.glb",
+     "belt": "items/antimage_slasher_skirt.glb",
+     "weapon": "items/antimage_slasher_weapon.glb",
+     "arms": "items/antimage_slasher_bracer.glb",
+     "offhand_weapon": "items/antimage_slasher_offhand_weapon.glb",
+     "head": "items/antimage_slasher_helmet.glb"
+    }
+   },
+   {
+    "id": "witch_hunter",
+    "name": "Охотник на ведьм",
+    "tier": 2,
+    "parts": {
+     "belt": "items/witch_hunter_belt.glb",
+     "head": "items/witch_hunter_head.glb",
+     "shoulder": "items/witch_hunter_shoulder.glb",
+     "weapon": "items/witch_hunter_weapon.glb",
+     "arms": "items/witch_hunter_arms.glb",
+     "armor": "items/witch_hunter_armor.glb",
+     "offhand_weapon": "items/witch_hunter_offhand.glb"
+    }
+   },
+   {
+    "id": "awakened",
+    "name": "Наследие пробуждённых",
+    "tier": 3,
+    "parts": {
+     "arms": "items/bracers_of_the_awakened.glb",
+     "head": "items/gift_of_the_awakened.glb",
+     "belt": "items/leggings_of_the_awakened.glb",
+     "offhand_weapon": "items/shard_of_retribution.glb",
+     "weapon": "items/shard_of_vengeance.glb",
+     "armor": "items/shroud_of_the_awakened.glb",
+     "shoulder": "items/words_of_the_awakened.glb"
+    }
+   },
+   {
+    "id": "faceless_death",
+    "name": "Безликая смерть",
+    "tier": 5,
+    "parts": {
+     "belt": "items/am_royal_ornaments_belt.glb",
+     "offhand_weapon": "items/am_royal_ornaments_off_hand.glb",
+     "weapon": "items/am_royal_ornaments_weapon.glb",
+     "arms": "items/am_royal_ornaments_arms.glb",
+     "shoulder": "items/am_royal_ornaments_shoulder.glb",
+     "head": "items/am_royal_ornaments_head.glb",
+     "armor": "items/am_royal_ornaments_armor.glb"
+    }
+   },
+   {
+    "id": "basher",
+    "name": "Basher of Mage Skulls",
+    "tier": 8,
+    "parts": {
+     "offhand_weapon": "items/skullbasher_offhand.glb",
+     "weapon": "items/skullbasher.glb"
+    }
+   },
+   {
+    "id": "survivor",
+    "name": "Guilt of the Survivor",
+    "tier": 10,
+    "parts": {
+     "weapon": "items/god_eater_weapon.glb",
+     "offhand_weapon": "items/god_eater_off_hand.glb",
+     "shoulder": "items/god_eater_shoulder.glb",
+     "head": "items/god_eater_head.glb",
+     "belt": "items/god_eater_belt.glb",
+     "armor": "items/god_eater_armor.glb",
+     "arms": "items/god_eater_arms.glb"
+    }
+   },
+   {
+    "id": "wei",
+    "name": "Персона: Wei",
+    "tier": 12,
+    "parts": {
+     "body": "body_persona.glb"
+    }
+   }
+  ]
+ },
+ "invoker": {
+  "slots": [
+   "back",
+   "shoulder",
+   "body_head",
+   "head",
+   "arms",
+   "belt"
+  ],
+  "default": {
+   "back": "items/invoker_cape.glb",
+   "shoulder": "items/invoker_shoulder.glb",
+   "body_head": "items/invoker_head.glb",
+   "head": "items/invoker_hair.glb",
+   "arms": "items/invoker_bracer.glb",
+   "belt": "items/invoker_dress.glb"
+  },
+  "sets": [
+   {
+    "id": "iceforged",
+    "name": "Ледяная ковка",
+    "tier": 1,
+    "parts": {
+     "arms": "items/iceforged_bracer.glb",
+     "shoulder": "items/iceforged_shoulders.glb",
+     "back": "items/iceforged_cape.glb",
+     "head": "items/iceforged_hair.glb"
+    }
+   },
+   {
+    "id": "northern_blight",
+    "name": "Северная гниль",
+    "tier": 2,
+    "parts": {
+     "arms": "items/frostivus2018_invoker_keeper_of_magic_arms.glb",
+     "back": "items/frostivus2018_invoker_keeper_of_magic_back.glb",
+     "head": "items/frostivus2018_invoker_keeper_of_magic_head.glb",
+     "belt": "items/frostivus2018_invoker_keeper_of_magic_belt.glb",
+     "shoulder": "items/frostivus2018_invoker_keeper_of_magic_shoulder.glb"
+    }
+   },
+   {
+    "id": "cadenza",
+    "name": "Каденция",
+    "tier": 3,
+    "parts": {
+     "belt": "items/cadenza_belt.glb",
+     "arms": "items/cadenza_arms.glb",
+     "back": "items/cadenza_cape.glb",
+     "head": "items/cadenza_hair.glb",
+     "shoulder": "items/cadenza_shoulders.glb"
+    }
+   },
+   {
+    "id": "sempiternal",
+    "name": "Вечные откровения",
+    "tier": 5,
+    "parts": {
+     "head": "items/sempiternal_revelations_hat.glb",
+     "belt": "items/sempiternal_revelations_belt.glb",
+     "back": "items/sempiternal_revelations_cape.glb",
+     "arms": "items/sempiternal_revelations_arms.glb",
+     "shoulder": "items/sempiternal_revelations_shoulder.glb"
+    }
+   },
+   {
+    "id": "magus_apex",
+    "name": "Magus Apex",
+    "tier": 7,
+    "parts": {
+     "head": "items/magus_apex.glb"
+    }
+   },
+   {
+    "id": "dark_artistry",
+    "name": "Dark Artistry",
+    "tier": 8,
+    "parts": {
+     "back": "items/dark_artistry_cape_model.glb",
+     "head": "items/dark_artistry_hair_model.glb",
+     "arms": "items/dark_artistry_bracer_model.glb",
+     "belt": "items/dark_artistry_belt_model.glb",
+     "shoulder": "items/dark_artistry_shoulder_model.glb"
+    }
+   }
+  ]
+ },
+ "shadow_fiend": {
+  "slots": [
+   "head",
+   "shoulder",
+   "arms",
+   "body"
+  ],
+  "default": {
+   "head": "items/shadow_fiend_head.glb",
+   "shoulder": "items/shadow_fiend_shoulders.glb",
+   "arms": "items/shadow_fiend_arms.glb",
+   "body": "body.glb"
+  },
+  "sets": [
+   {
+    "id": "raven_harvest",
+    "name": "Вороний урожай",
+    "tier": 1,
+    "parts": {
+     "shoulder": "items/shadow_fiend_archon_of_darkness_shoulder.glb",
+     "head": "items/shadow_fiend_archon_of_darkness_head.glb",
+     "arms": "items/shadow_fiend_archon_of_darkness_arms.glb"
+    }
+   },
+   {
+    "id": "molten_monarch",
+    "name": "Расплавленный монарх",
+    "tier": 2,
+    "parts": {
+     "shoulder": "items/sf_dark_lord_shoulder.glb",
+     "arms": "items/sf_dark_lord_arms.glb",
+     "head": "items/sf_dark_lord_head.glb"
+    }
+   },
+   {
+    "id": "eternal_harvest",
+    "name": "Вечная жатва",
+    "tier": 5,
+    "parts": {
+     "head": "items/ferrum_chiroptera_head.glb",
+     "shoulder": "items/ferrum_chiroptera_shoulder.glb",
+     "arms": "items/ferrum_chiroptera_arms.glb"
+    }
+   },
+   {
+    "id": "souls_tyrant",
+    "name": "Тиран душ",
+    "tier": 6,
+    "parts": {
+     "shoulder": "items/sf_souls_tyrant_shoulder.glb",
+     "arms": "items/sf_souls_tyrant_arms.glb",
+     "head": "items/sf_souls_tyrant_head.glb"
+    }
+   },
+   {
+    "id": "sundered_souls",
+    "name": "Lord of the Sundered Souls",
+    "tier": 8,
+    "parts": {
+     "head": "items/lord_of_the_elder_dunes_head.glb",
+     "arms": "items/lord_of_the_elder_dunes_arms.glb",
+     "shoulder": "items/lord_of_the_elder_dunes_shoulders.glb"
+    }
+   },
+   {
+    "id": "demon_eater",
+    "name": "Demon Eater",
+    "tier": 12,
+    "parts": {
+     "body": "body_arcana.glb",
+     "head": "items/sf_arcana_head.glb",
+     "shoulder": "items/sf_arcana_shoulders.glb",
+     "arms": "items/sf_arcana_arms.glb"
+    }
+   }
+  ]
+ }
+}

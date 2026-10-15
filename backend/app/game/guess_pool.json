@@ -1,0 +1,274 @@
+{
+ "earthshaker": {
+  "name": "Earthshaker",
+  "items": [
+   "items/belt.glb",
+   "items/bracers.glb",
+   "items/totem.glb"
+  ]
+ },
+ "sven": {
+  "name": "Sven",
+  "items": [
+   "items/sven_belt.glb",
+   "items/sven_gauntlet.glb",
+   "items/sven_mask.glb",
+   "items/sven_shoulder.glb",
+   "items/sven_sword.glb"
+  ]
+ },
+ "tiny": {
+  "name": "Tiny",
+  "items": [
+   "items/tiny_01_body.glb",
+   "items/tiny_01_head.glb",
+   "items/tiny_01_left_arm.glb",
+   "items/tiny_01_right_arm.glb",
+   "items/tiny_tree.glb"
+  ]
+ },
+ "kunkka": {
+  "name": "Kunkka",
+  "items": [
+   "items/kunkka_feet.glb",
+   "items/kunkka_hair.glb",
+   "items/kunkka_hands.glb",
+   "items/kunkka_shoulders.glb",
+   "items/kunkka_spyglass.glb",
+   "items/kunkka_sword.glb"
+  ]
+ },
+ "tidehunter": {
+  "name": "Tidehunter",
+  "items": [
+   "items/tidehunter_anchor.glb",
+   "items/tidehunter_belt.glb",
+   "items/tidehunter_bracer.glb",
+   "items/tidehunter_fish.glb"
+  ]
+ },
+ "bristleback": {
+  "name": "Bristleback",
+  "items": [
+   "items/bristleback_back.glb",
+   "items/bristleback_bracer.glb",
+   "items/bristleback_head.glb",
+   "items/bristleback_necklace.glb",
+   "items/bristleback_weapon.glb"
+  ]
+ },
+ "ogre_magi": {
+  "name": "Ogre Magi",
+  "items": [
+   "items/ogre_magi_belt.glb",
+   "items/ogre_magi_bracers.glb",
+   "items/ogre_magi_cape.glb",
+   "items/ogre_magi_hats.glb",
+   "items/ogre_magi_weapon.glb"
+  ]
+ },
+ "dragon_knight": {
+  "name": "Dragon Knight",
+  "items": [
+   "items/bracers.glb",
+   "items/helmet.glb",
+   "items/shield.glb",
+   "items/shoulders.glb",
+   "items/skirt.glb",
+   "items/weapon.glb"
+  ]
+ },
+ "mirana": {
+  "name": "Mirana",
+  "items": [
+   "items/bow.glb",
+   "items/bracers.glb",
+   "items/cape.glb",
+   "items/head_item.glb",
+   "items/mount.glb",
+   "items/quiver.glb",
+   "items/shoulders.glb"
+  ]
+ },
+ "phantom_lancer": {
+  "name": "Phantom Lancer",
+  "items": [
+   "items/phantom_lancer_belt.glb",
+   "items/phantom_lancer_gauntlet.glb",
+   "items/phantom_lancer_head.glb",
+   "items/phantom_lancer_shoulderpad.glb",
+   "items/phantom_lancer_weapon.glb"
+  ]
+ },
+ "riki": {
+  "name": "Riki",
+  "items": [
+   "items/rikimaru__offhand_weapon.glb",
+   "items/rikimaru_gloves.glb",
+   "items/rikimaru_head.glb",
+   "items/rikimaru_shoulder.glb",
+   "items/rikimaru_tail.glb",
+   "items/rikimaru_weapon.glb"
+  ]
+ },
+ "templar_assassin": {
+  "name": "Templar Assassin",
+  "items": [
+   "items/lanaya_bracers_skirt.glb",
+   "items/lanaya_cowl_shoulder.glb",
+   "items/lanaya_hair.glb"
+  ]
+ },
+ "luna": {
+  "name": "Luna",
+  "items": [
+   "items/luna_head.glb",
+   "items/luna_helmet.glb",
+   "items/luna_mount.glb",
+   "items/luna_shield.glb",
+   "items/luna_shoulder.glb",
+   "items/luna_weapon.glb"
+  ]
+ },
+ "ursa": {
+  "name": "Ursa",
+  "items": [
+   "items/bracers.glb",
+   "items/fur.glb",
+   "items/helmet.glb",
+   "items/skirt.glb"
+  ]
+ },
+ "bounty_hunter": {
+  "name": "Bounty Hunter",
+  "items": [
+   "items/bounty_hunter_backpack.glb",
+   "items/bounty_hunter_bandana.glb",
+   "items/bounty_hunter_bweapon.glb",
+   "items/bounty_hunter_lweapon.glb",
+   "items/bounty_hunter_pads.glb",
+   "items/bounty_hunter_rweapon.glb"
+  ]
+ },
+ "slark": {
+  "name": "Slark",
+  "items": [
+   "items/bracer.glb",
+   "items/cape.glb",
+   "items/hood.glb",
+   "items/shoulder.glb",
+   "items/weapon.glb"
+  ]
+ },
+ "faceless_void": {
+  "name": "Faceless Void",
+  "items": [
+   "items/faceless_void_belt.glb",
+   "items/faceless_void_bracer.glb",
+   "items/faceless_void_head.glb",
+   "items/faceless_void_shoulder.glb",
+   "items/faceless_void_weapon.glb"
+  ]
+ },
+ "spectre": {
+  "name": "Spectre",
+  "items": [
+   "items/spectre_dress.glb",
+   "items/spectre_hat.glb",
+   "items/spectre_weapon.glb",
+   "items/spectre_wings.glb"
+  ]
+ },
+ "medusa": {
+  "name": "Medusa",
+  "items": [
+   "items/medusa_arms.glb",
+   "items/medusa_bow.glb",
+   "items/medusa_tail.glb",
+   "items/medusa_torso.glb",
+   "items/medusa_veil.glb"
+  ]
+ },
+ "troll_warlord": {
+  "name": "Troll Warlord",
+  "items": [
+   "items/troll_warlord_armor_model_lod0.glb",
+   "items/troll_warlord_head.glb",
+   "items/troll_warlord_shoulders.glb",
+   "items/troll_warlord_weapons.glb"
+  ]
+ },
+ "storm_spirit": {
+  "name": "Storm Spirit",
+  "items": [
+   "items/storm_hat.glb",
+   "items/storm_shirt.glb",
+   "items/storm_shoulder.glb"
+  ]
+ },
+ "lion": {
+  "name": "Lion",
+  "items": [
+   "items/lion_cape.glb",
+   "items/lion_demonarm.glb",
+   "items/lion_shoulder.glb",
+   "items/lion_weapon.glb"
+  ]
+ },
+ "lich": {
+  "name": "Lich",
+  "items": [
+   "items/lich_bracer.glb",
+   "items/lich_dress.glb",
+   "items/lich_horns.glb",
+   "items/lich_neck_rock.glb"
+  ]
+ },
+ "witch_doctor": {
+  "name": "Witch Doctor",
+  "items": [
+   "items/witchdoctor_bag.glb",
+   "items/witchdoctor_belt.glb",
+   "items/witchdoctor_head.glb",
+   "items/witchdoctor_staff.glb"
+  ]
+ },
+ "queenofpain": {
+  "name": "Queen of Pain",
+  "items": [
+   "items/hair.glb",
+   "items/queenofpain_legs.glb",
+   "items/queenofpain_weapon.glb",
+   "items/shoulders.glb",
+   "items/wings.glb"
+  ]
+ },
+ "rubick": {
+  "name": "Rubick",
+  "items": [
+   "items/cape.glb",
+   "items/rubick_head.glb",
+   "items/rubick_staff.glb",
+   "items/shoulder.glb"
+  ]
+ },
+ "windrunner": {
+  "name": "Windranger",
+  "items": [
+   "items/windrunner_bow.glb",
+   "items/windrunner_cape.glb",
+   "items/windrunner_head.glb",
+   "items/windrunner_quiver.glb",
+   "items/windrunner_shoulderpads.glb"
+  ]
+ },
+ "terrorblade": {
+  "name": "Terrorblade",
+  "items": [
+   "items/armor.glb",
+   "items/horns.glb",
+   "items/weapon.glb",
+   "items/wings.glb"
+  ]
+ }
+}
