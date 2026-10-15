@@ -22,7 +22,7 @@
 
 ## Über das Projekt
 
-ELT ist eine Telegram Mini App für eine russischsprachige Dota-2-Community rund um den Telegram-Kanal ELT. Spieler tippen auf einen 3D-Pudge, verbessern Helden und deren Item-Sets, spielen Minispiele, treten Gilden bei und laden Freunde ein. Eine zweite, knappe Währung („Seelen“) lässt sich gegen echte Dota-2-Items vom Steam-Community-Markt eintauschen, die ein Admin über Steam verschenkt.
+ELT ist eine Telegram Mini App für eine russischsprachige Dota-2-Community rund um den Telegram-Kanal ELT. Spieler tippen auf einen 3D-Pudge, verbessern Helden und deren Item-Sets, spielen Minispiele, treten Gilden bei und laden Freunde ein. Ein Belohnungssystem mit einer zweiten Währung („Seelen“) erlaubt es, aktive Spieler mit kosmetischen Dota-2-Items zu belohnen; die Vergabe erfolgt manuell durch einen Admin über Steam.
 
 Das Backend läuft als ein einzelner Docker-Container auf Railway: FastAPI liefert die API, die gebaute React-App und den Webhook des Telegram-Bots aus.
 
@@ -50,7 +50,7 @@ Die unten beschriebenen technischen Entscheidungen (Server als Quelle der Wahrhe
 | **Gilden und Chat** | Gilden mit wöchentlichen Aufgaben und Gildenkriegen; Welt- und Gildenchat mit Spamschutz, Schimpfwortfilter, Meldungen und Moderation. |
 | **Empfehlungsprogramm** | Zweistufiges Programm, ausgezahlt in Seelen. Ein Freund zählt erst, wenn er ein verifiziertes Steam-Konto verknüpft hat. |
 | **Ligen und Bestenlisten** | Dynamische Ligen wie MMR: Wertung mit 7 Tagen Halbwertszeit, Liga nach Perzentil. Wöchentliche und monatliche Bestenlisten zählen Aktivitätspunkte, nicht ausgegebenes Geld. |
-| **Seelen-Shop** | Echte Items mit Live-Preisen vom Steam-Community-Markt; Bestellungen werden von einem Admin ausgeliefert oder erstattet. |
+| **Belohnungs-Shop** | Kosmetische Items als Prämien, Preise orientieren sich am Steam-Community-Markt; Einlösungen werden von einem Admin ausgeliefert oder erstattet. |
 | **Videowettbewerb** | Spieler reichen TikTok-/YouTube-Videos ein; Aufrufe werden automatisch abgerufen (YouTube Data API, Auslesen der TikTok-Seite), mit manueller Eingabe durch den Admin als Rückfalloption. |
 | **Admin-Bereich** | Online-Nutzer, Registrierungen, erledigte Aufgaben, Wirtschaft, Shop-Bestellungen, Wettbewerbsprüfung und Chat-Moderation, alles direkt in der Mini App. |
 
@@ -98,7 +98,7 @@ Eine ausführlichere Beschreibung (auf Englisch) steht in [docs/ARCHITECTURE.md]
 ## Technische Schwerpunkte
 
 - **Der Server ist die einzige Quelle der Wahrheit.** Der Client sammelt Taps und sendet sie einmal pro Sekunde, zeigt sie aber sofort an; der Server begrenzt sie nach Energie und Rate-Limit und berechnet Energie und passives Einkommen anhand der Serverzeit.
-- **Geldähnliche Währung läuft über ein Journal.** Seelen lassen sich gegen echte Items tauschen, deshalb läuft jede Änderung über eine einzige Funktion, die Kontostand und Journaleintrag in derselben Transaktion schreibt.
+- **Geldähnliche Währung läuft über ein Journal.** Seelen lassen sich gegen Prämien einlösen, deshalb läuft jede Änderung über eine einzige Funktion, die Kontostand und Journaleintrag in derselben Transaktion schreibt.
 - **Zeilensperren gegen Race Conditions.** Jede Gutschrift läuft in einer Transaktion, die zuerst `SELECT … FOR UPDATE` auf die Spielerzeile ausführt.
 - **Idempotente Auszahlungen.** Wochen- und Monatsprämien sind durch einen `PeriodPayout`-Eintrag abgesichert; das Abholen von Belohnungen durch Unique Constraints, sodass Doppelklicks und Neustarts nie doppelt auszahlen.
 - **Missbrauchsschutz durch Architektur.** Ein Telegram-Konto = ein Steam-Konto, geprüft nach Kontoalter, Dota-Spielstunden und Anzahl der Matches. Die Signatur der Telegram-`initData` wird bei jeder Anfrage geprüft; der Webhook nutzt ein geheimes Token.
@@ -146,6 +146,14 @@ Vier Tests prüfen, ob für jeden Helden und jedes Item eine 3D-Modelldatei exis
 ### Produktion
 
 Das `Dockerfile` baut Frontend und API in ein gemeinsames Image. Benötigte Umgebungsvariablen: `BOT_TOKEN`, `BOT_MODE=webhook`, `WEBAPP_URL`, `WEBHOOK_SECRET`, `DATABASE_URL`, `ADMIN_IDS`. Die vollständige Liste steht in `backend/app/config.py`.
+
+## Betrieb & Deployment
+
+- **Docker:** Ein mehrstufiges `Dockerfile` baut zuerst die React-App (Node 24) und dann das Python-3.12-Image mit FastAPI; der Container läuft als Nicht-Root-Benutzer.
+- **Railway:** Die App läuft als ein einzelner Container auf Railway; der Telegram-Bot nutzt dort einen Webhook (lokal Polling).
+- **Datenbank-Migrationen:** Alembic (`backend/migrations/versions/`); beim Start führt der Container `alembic upgrade head` aus.
+- **CI:** GitHub Actions (`.github/workflows/tests.yml`) führt bei jedem Push auf `main` die Backend-Tests (`pytest`) sowie Lint (`oxlint`) und Build des Frontends aus.
+- **Konfiguration:** über Umgebungsvariablen, Vorlage in `backend/.env.example`; keine Zugangsdaten im Repository.
 
 ## 3D-Assets
 

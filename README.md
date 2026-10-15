@@ -4,7 +4,7 @@
 
 # ELT — Dota 2 Telegram Mini App
 
-**A full-stack Telegram game for the Dota 2 community: 3D tapper, mini-games, draft duel, guilds, referrals and a prize shop.**
+**A full-stack Telegram game for the Dota 2 community: 3D tapper, mini-games, draft duel, guilds, referrals and a reward shop.**
 
 English · [Deutsch](README.de.md)
 
@@ -22,7 +22,7 @@ English · [Deutsch](README.de.md)
 
 ## About
 
-ELT is a Telegram Mini App built for a Russian-speaking Dota 2 community around the ELT Telegram channel. Players tap a 3D Pudge, upgrade heroes and their item sets, play mini-games, join guilds and invite friends. A second, scarce currency ("souls") can be exchanged for real Dota 2 items from the Steam Community Market, which an admin gifts through Steam.
+ELT is a Telegram Mini App built for a Russian-speaking Dota 2 community around the ELT Telegram channel. Players tap a 3D Pudge, upgrade heroes and their item sets, play mini-games, join guilds and invite friends. A reward system with a second currency ("souls") lets active players redeem cosmetic Dota 2 items; rewards are handed out manually by an admin through Steam.
 
 The backend runs as a single Docker container on Railway: FastAPI serves the API, the built React app and the Telegram bot webhook.
 
@@ -50,7 +50,7 @@ The engineering practices described below (server-side authority, a ledger, idem
 | **Guilds and chat** | Guilds with weekly quests and guild wars; world and guild chat with anti-spam, profanity filter, reports and moderation. |
 | **Referrals** | Two-level referral program paid in souls. A friend counts only after linking a verified Steam account. |
 | **Leagues and leaderboards** | Dynamic leagues like MMR: rating with a 7-day half-life, league by percentile. Weekly and monthly leaderboards rank activity points, not money spent. |
-| **Souls shop** | Real items priced live from the Steam Community Market; orders are fulfilled or refunded by an admin. |
+| **Reward shop** | Cosmetic items as rewards, priced from the Steam Community Market; redemptions are fulfilled or refunded by an admin. |
 | **Video contest** | Players submit TikTok / YouTube videos; views are fetched automatically (YouTube Data API, TikTok page parsing) with a manual admin fallback. |
 | **Admin panel** | Online users, sign-ups, task completion, economy, shop orders, contest review and chat moderation, all inside the Mini App. |
 
@@ -98,7 +98,7 @@ A longer walkthrough is in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 ## Engineering highlights
 
 - **The server is the source of truth.** The client batches taps once per second and shows them optimistically; the server caps them by energy and a rate limit and computes energy regen and passive income from server time.
-- **Money-like currency goes through a ledger.** Souls can be exchanged for real items, so every change goes through one function that updates the balance and writes a ledger entry in the same transaction.
+- **Money-like currency goes through a ledger.** Souls can be redeemed for rewards, so every change goes through one function that updates the balance and writes a ledger entry in the same transaction.
 - **Row locks against race conditions.** Every credit runs inside a transaction that first takes `SELECT … FOR UPDATE` on the player row.
 - **Idempotent payouts.** Weekly and monthly prizes are guarded by a `PeriodPayout` record; reward claims are protected by unique constraints, so double clicks and restarts never pay twice.
 - **Anti-abuse by design.** One Telegram account = one Steam account, verified by account age, Dota hours and match count. Telegram `initData` signatures are checked on every request; the webhook uses a secret token.
@@ -146,6 +146,14 @@ Four tests check that every hero and item has a 3D model file. They are marked `
 ### Production
 
 The `Dockerfile` builds the frontend and the API into one image. Required environment variables: `BOT_TOKEN`, `BOT_MODE=webhook`, `WEBAPP_URL`, `WEBHOOK_SECRET`, `DATABASE_URL`, `ADMIN_IDS`. See `backend/app/config.py` for the full list.
+
+## Operations & deployment
+
+- **Docker:** a multi-stage `Dockerfile` first builds the React app (Node 24), then the Python 3.12 image with FastAPI; the container runs as a non-root user.
+- **Railway:** the app runs as a single container on Railway; the Telegram bot uses a webhook there (polling locally).
+- **Database migrations:** Alembic (`backend/migrations/versions/`); on start the container runs `alembic upgrade head`.
+- **CI:** GitHub Actions (`.github/workflows/tests.yml`) runs backend tests (`pytest`) plus frontend lint (`oxlint`) and build on every push to `main`.
+- **Configuration:** environment variables, template in `backend/.env.example`; no credentials in the repository.
 
 ## 3D assets
 
